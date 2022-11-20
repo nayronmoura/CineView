@@ -12,7 +12,7 @@ class PageViewPopularWidget extends StatelessWidget {
   PageViewPopularStore store = Modular.get();
 
   final PageController _pageController =
-      PageController(initialPage: 1, viewportFraction: 0.8);
+      PageController(initialPage: 1, viewportFraction: 0.85);
 
   PageViewPopularWidget({Key? key}) : super(key: key);
 
@@ -25,20 +25,16 @@ class PageViewPopularWidget extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: store.popular.length,
           itemBuilder: (context, index) {
-            final animation = lerpDouble(0.8, 1, 1);
             ApiModel film = store.popular[index];
-            return Opacity(
-              opacity: animation! > 1.0 ? 1.0 : animation,
-              child: Transform.scale(
-                scale: animation,
-                child: GestureDetector(
-                  onTap: () {
-                    Modular.to.pushNamed('/details/', arguments: film.id);
-                  },
-                  child: PopularWidget(
-                    film: film,
-                  ),
-                ),
+            return Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: GestureDetector(
+                    onTap: () {
+                      Modular.to.pushNamed('/details/', arguments: film.id);
+                    },
+                    child: PopularWidget(
+                      film: film,
+                    ),
               ),
             );
           },

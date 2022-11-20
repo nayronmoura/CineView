@@ -10,7 +10,7 @@ class PageViewTemplateWidget extends StatelessWidget {
   final String title;
   final List<ApiModel> films;
 
-  PageViewTemplateWidget({Key? key, required this.title, required this.films})
+  const PageViewTemplateWidget({Key? key, required this.title, required this.films})
       : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class PageViewTemplateWidget extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.02,
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.2,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: films.length,

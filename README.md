@@ -39,7 +39,7 @@ Selecione a plataforma que deseja rodar o projeto e aguarde o carregamento.
         <p>Tela Home</p>
     </article>
     <article>
-        <img src="Screeshot_Details.png">
+        <img src="Screenshot_Details.png">
         <p>Tela Detalhes</p>
     </article>
     <article>

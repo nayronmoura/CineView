@@ -9,7 +9,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 class HomePage extends StatelessWidget {
   final HomeStore store;
 
-  HomePage({Key? key, required this.store});
+  const HomePage({Key? key, required this.store}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,29 +44,25 @@ class HomePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 15),
                       child: SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.4,
+                          height: MediaQuery.of(context).size.height * 0.3,
                           child: PageViewPopularWidget()),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.3,
                       child: PageViewTemplateWidget(
                         title: 'Melhor Avaliados',
                         films: store.listTopRated,
                       ),
                     ),
+
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.3,
                       child: PageViewTemplateWidget(
                         title: 'Em Breve',
                         films: store.listUpComing,
                       ),
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
+
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.4,
                       child: PageViewTemplateWidget(

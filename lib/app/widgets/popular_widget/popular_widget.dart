@@ -12,15 +12,16 @@ class PopularWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.4,
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: MediaQuery.of(context).size.height * 0.3,
       child: Column(
         children: [
           CachedNetworkImage(
             imageUrl: "https://image.tmdb.org/t/p/w500${film.pathbanner}",
+            fit: BoxFit.cover,
             errorWidget: (context, url, error) => Icon(
               Icons.error,
               color: Colors.white,
-              size: MediaQuery.of(context).size.width * 0.05,
+              size: MediaQuery.of(context).size.width * 0.3,
             ),
             progressIndicatorBuilder: (context, url, downloadProgress) =>
                 Center(

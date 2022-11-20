@@ -5,7 +5,7 @@ import 'package:filmes_em_cartaz/app/modules/details/models/profile_model.dart';
 
 
 class FilmeService {
-  final String _token = "";
+  final String _token = "9f02e644592b26bb6c0294c752c82f2c";
 
   Future<List<ApiModel>> fetchPopular() async {
     var result = await Dio().get(
@@ -50,6 +50,7 @@ class FilmeService {
   Future<DetailModel> fetchDetails(int id) async {
     var result = await Dio().get(
         "https://api.themoviedb.org/3/movie/$id?api_key=$_token&language=pt-BR");
+    print(result.data["video"]);
     return DetailModel.fromJson(result.data);
   }
 
@@ -85,5 +86,11 @@ class FilmeService {
       todoarray.add(ApiModel.fromJson(item));
     }
     return todoarray;
+  }
+
+  Future<String> fetchTrailer(int id) async {
+    var result = await Dio().get(
+        "https://api.themoviedb.org/3/movie/$id/videos?api_key=$_token&language=pt-BR");
+    return result.data["results"][0]["key"];
   }
 }
