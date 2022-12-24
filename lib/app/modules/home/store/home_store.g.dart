@@ -13,13 +13,13 @@ mixin _$HomeStore on HomeStoreBase, Store {
       Atom(name: 'HomeStoreBase.listTopRated', context: context);
 
   @override
-  List<ApiModel> get listTopRated {
+  List<ApiModel>? get listTopRated {
     _$listTopRatedAtom.reportRead();
     return super.listTopRated;
   }
 
   @override
-  set listTopRated(List<ApiModel> value) {
+  set listTopRated(List<ApiModel>? value) {
     _$listTopRatedAtom.reportWrite(value, super.listTopRated, () {
       super.listTopRated = value;
     });
@@ -29,13 +29,13 @@ mixin _$HomeStore on HomeStoreBase, Store {
       Atom(name: 'HomeStoreBase.listUpComing', context: context);
 
   @override
-  List<ApiModel> get listUpComing {
+  List<ApiModel>? get listUpComing {
     _$listUpComingAtom.reportRead();
     return super.listUpComing;
   }
 
   @override
-  set listUpComing(List<ApiModel> value) {
+  set listUpComing(List<ApiModel>? value) {
     _$listUpComingAtom.reportWrite(value, super.listUpComing, () {
       super.listUpComing = value;
     });
@@ -45,13 +45,13 @@ mixin _$HomeStore on HomeStoreBase, Store {
       Atom(name: 'HomeStoreBase.listPlayingNow', context: context);
 
   @override
-  List<ApiModel> get listPlayingNow {
+  List<ApiModel>? get listPlayingNow {
     _$listPlayingNowAtom.reportRead();
     return super.listPlayingNow;
   }
 
   @override
-  set listPlayingNow(List<ApiModel> value) {
+  set listPlayingNow(List<ApiModel>? value) {
     _$listPlayingNowAtom.reportWrite(value, super.listPlayingNow, () {
       super.listPlayingNow = value;
     });

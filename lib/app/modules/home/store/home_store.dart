@@ -12,19 +12,19 @@ abstract class HomeStoreBase with Store {
   final FilmeService _filmeService = Modular.get();
 
   @observable
-  List<ApiModel> listTopRated = [];
+  List<ApiModel>? listTopRated;
 
   @action
   void setListTopRated(List<ApiModel> value) => listTopRated = value;
 
   @observable
-  List<ApiModel> listUpComing = [];
+  List<ApiModel>? listUpComing;
 
   @action
   void setListUpComing(List<ApiModel> value) => listUpComing = value;
 
   @observable
-  List<ApiModel> listPlayingNow = [];
+  List<ApiModel>? listPlayingNow;
 
   @action
   void setListPlayingNow(List<ApiModel> value) => listPlayingNow = value;

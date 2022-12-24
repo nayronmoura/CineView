@@ -50,7 +50,6 @@ class FilmeService {
   Future<DetailModel> fetchDetails(int id) async {
     var result = await Dio().get(
         "https://api.themoviedb.org/3/movie/$id?api_key=$_token&language=pt-BR");
-    print(result.data["video"]);
     return DetailModel.fromJson(result.data);
   }
 
