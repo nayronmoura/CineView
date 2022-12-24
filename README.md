@@ -1,4 +1,5 @@
-# filmes_em_cartaz
+:construction: Projeto em construção :construction:
+# CineView
 
 Uma Aplicação Flutter que consome uma Api chamada The Movie DB.
 
@@ -7,7 +8,7 @@ Uma Aplicação Flutter que consome uma Api chamada The Movie DB.
 Para o Desenvolvimento desta aplicação, foi utilizado uma ferramenta chamada Flutter. Flutter é um
 Framework de desenvolvimento de aplicativos móveis, criado pelo Google, que permite a criação de
 aplicativos compilados nativamente para Android e iOS a partir de um único código base.
-Para instalar essa ferramenta, siga os paços descritos no site [oficial do Flutter](https://flutter.dev/docs/get-started/install).
+Para instalar essa ferramenta, siga os passos descritos no site [oficial do Flutter](https://flutter.dev/docs/get-started/install).
 
 ## Como rodar o projeto?
 
@@ -32,7 +33,6 @@ flutter run
 Selecione a plataforma que deseja rodar o projeto e aguarde o carregamento.
 
 ## Visual do aplicativo
-
 <div style='display:flex;'>
     <article>
         <img src="Screeshot_Home.png">
@@ -47,7 +47,7 @@ Selecione a plataforma que deseja rodar o projeto e aguarde o carregamento.
         <p>Tela Pesquisa</p>
     </article>
 </div>
-<hr>
+
 ## Contatos
 
 - [Linkedin](https://www.linkedin.com/in/nayron-moura)
