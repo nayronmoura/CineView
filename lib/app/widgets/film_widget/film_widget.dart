@@ -12,13 +12,12 @@ class FilmWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.3,
-      height: MediaQuery.of(context).size.height * 0.3,
       child: Column(
         children: [
           CachedNetworkImage(
             width: MediaQuery.of(context).size.width * 0.3,
-            height: MediaQuery.of(context).size.height * 0.3,
-            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height * 0.2,
+            fit: BoxFit.fill,
             imageUrl: "https://image.tmdb.org/t/p/w500${film.pathimg}",
           ),
         ],

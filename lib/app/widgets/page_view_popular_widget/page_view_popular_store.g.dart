@@ -13,13 +13,13 @@ mixin _$PageViewPopularStore on _PageViewPopularStoreBase, Store {
       Atom(name: '_PageViewPopularStoreBase.popular', context: context);
 
   @override
-  List<ApiModel> get popular {
+  List<ApiModel>? get popular {
     _$popularAtom.reportRead();
     return super.popular;
   }
 
   @override
-  set popular(List<ApiModel> value) {
+  set popular(List<ApiModel>? value) {
     _$popularAtom.reportWrite(value, super.popular, () {
       super.popular = value;
     });

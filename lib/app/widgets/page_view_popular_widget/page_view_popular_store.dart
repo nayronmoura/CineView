@@ -15,7 +15,7 @@ abstract class _PageViewPopularStoreBase with Store {
   final FilmeService _service = Modular.get();
 
   @observable
-  List<ApiModel> popular = [];
+  List<ApiModel>? popular;
 
   @action
   void setPopular(List<ApiModel> value) => popular = value;
@@ -28,8 +28,17 @@ abstract class _PageViewPopularStoreBase with Store {
 
   @action
   void startTimer() {
+    if (popular != null && popular!.isNotEmpty) {
+      Timer.periodic(const Duration(seconds: 5), (timer) {
+        if (page < popular!.length - 1) {
+          page++;
+        } else {
+          page = 0;
+        }
+      });
+    }
     Timer.periodic(const Duration(seconds: 10), (timer) {
-      if (page == popular.length - 1) {
+      if (page == popular!.length - 1) {
         page = 0;
       } else {
         setPage(page++);

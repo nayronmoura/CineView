@@ -33,11 +33,19 @@ flutter run
 Selecione a plataforma que deseja rodar o projeto e aguarde o carregamento.
 
 ## Visual do aplicativo
-
-<div align='center'>
-        <img align="center" width="270"  height="480" src="Screenshot_Home.png">
-        <img align="center" width="270"  height="480" src="Screenshot_Details.png">
-        <img align="center" width="270"  height="480" src="Screenshot_Search.png">
+<div style='display:flex;'>
+    <article>
+        <img src="Screeshot_Home.png">
+        <p>Tela Home</p>
+    </article>
+    <article>
+        <img src="Screenshot_Details.png">
+        <p>Tela Detalhes</p>
+    </article>
+    <article>
+        <img src="Screeshot_Searchh.png">
+        <p>Tela Pesquisa</p>
+    </article>
 </div>
 
 ## Contatos

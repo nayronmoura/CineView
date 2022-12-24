@@ -11,9 +11,7 @@ class SearchTemplateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.1,
+    return Flexible(
         child: Row(
           children: [
             CachedNetworkImage(
@@ -23,8 +21,7 @@ class SearchTemplateWidget extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error,color: Colors.white,),
             ),
             Container(
-              width: MediaQuery.of(context).size.width * 0.8,
-              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width * 0.6,
               alignment: Alignment.centerLeft,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
